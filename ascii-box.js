@@ -18,3 +18,15 @@ function box(input, stringLength){
 }
 
 box('Hello friend', 30)
+
+// pass arguements from command line and use double box characters
+// let [vline, hline, tlcorner, trcorner, blcorner, brcorner] = ['║', '═', '╔', '╗', '╚', '╝']
+
+// function box(input){
+// 	input = input.padStart(input.length + 1, ' ').padEnd(input.length + 2, ' ')
+// 	boxstr = tlcorner + hline.repeat(input.length) + trcorner + '\n' + vline + input + vline + '\n' + blcorner + hline.repeat(input.length) + brcorner
+// 	console.log(boxstr)
+
+// }
+
+// box(process.argv[2])
