@@ -19,13 +19,16 @@ function box(string) {
 	arr.push(' '.repeat(maxChar))
 
 	// make box
-	let [hline, vline, corner] = ['-', '|', '+']
+	let [hline, vline, tlcorner, trcorner, blcorner, brcorner] = /*['═', '║', '╔', '╗', '╚', '╝'] ||*/ ['-', '|', '+', '+', '+', '+']
+
 	for (let x = 0; x != arr.length; x++) {
-		arr[x] = vline + arr[x] + vline + '\n'
+		arr[x] = vline + arr[x] + vline + ' \n'
 	}
-	arr.unshift(' ' + corner + hline.repeat(maxChar) + corner + '\n')
-	arr.push(corner + hline.repeat(maxChar) + corner + '\n')
+	arr.unshift(' ' + tlcorner + hline.repeat(maxChar) + trcorner + ' \n')
+	arr.push(blcorner + hline.repeat(maxChar) + brcorner + ' \n')
 	
 	return arr.join(' ')
 
 }
+
+export { box }
