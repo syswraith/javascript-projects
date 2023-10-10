@@ -32,4 +32,9 @@ function compareOp(){
 	}
 }
 
-while (currentScore != wantedScore){ setInterval(compareOp(), 2000); }
+let theInterval = setInterval(()=>{
+	if (currentScore != wantedScore){
+	compareOp()	
+	}
+	else { clearInterval(theInterval) }
+}, 1000)
